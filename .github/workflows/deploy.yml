@@ -1,14 +1,9 @@
-
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: saikumar-portfolio  # change this to your subfolder name
     steps:
       - uses: actions/checkout@v3
       - name: Set up Node.js
